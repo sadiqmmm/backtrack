@@ -1,0 +1,41 @@
+<%= form_for(@backlink) do |f| %>
+  <% if @backlink.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@backlink.errors.count, "error") %> prohibited this backlink from being saved:</h2>
+
+      <ul>
+      <% @backlink.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :project %><br>
+    <%= f.text_field :project %>
+  </div>
+  <div class="field">
+    <%= f.label :project_url %><br>
+    <%= f.text_field :project_url %>
+  </div>
+  <div class="field">
+    <%= f.label :backlink_url %><br>
+    <%= f.text_field :backlink_url %>
+  </div>
+  <div class="field">
+    <%= f.label :method %><br>
+    <%= f.text_field :method %>
+  </div>
+  <div class="field">
+    <%= f.label :published_at %><br>
+    <%= f.datetime_select :published_at %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

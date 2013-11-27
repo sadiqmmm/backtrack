@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @backlink.project %>
+</p>
+
+<p>
+  <strong>Project url:</strong>
+  <%= @backlink.project_url %>
+</p>
+
+<p>
+  <strong>Backlink url:</strong>
+  <%= @backlink.backlink_url %>
+</p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @backlink.method %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @backlink.published_at %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @backlink.notes %>
+</p>
+
+<%= link_to 'Edit', edit_backlink_path(@backlink) %> |
+<%= link_to 'Back', backlinks_path %>
