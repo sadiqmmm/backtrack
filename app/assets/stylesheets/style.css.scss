@@ -1,5 +1,36 @@
-@import "bootstrap";
+/*
+$baseFontFamily:Montserrat;
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen); 
+*/
+
+$btnPrimaryBackground: green;
+
+$navbarBackgroundHighLight: white;
+$navbarBackground: white;
+
+@import 'bootstrap';
+
 
 body {
-	padding-top: 70px;
+	padding-top: 60px;
+}
+
+
+@import 'bootstrap-responsive';
+
+.navbar-inner {
+	@include box-shadow(none !important);
+	border: none;
+
+}
+.footer {
+	margin-top: 50px;
+	color: $grayLight;
+	a {
+	color: $gray;
+	}
 }

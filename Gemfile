@@ -38,7 +38,7 @@ group :production do
 end
 
 gem "simple_form", "~> 3.0.0"
-gem "bootstrap-sass", "~> 3.0.2.1"
+gem "bootstrap-sass", "2.3.2.2"
 gem "jquery-turbolinks", "~> 2.0.1"
 gem "puma", "~> 2.6.0"
 gem "devise", "~> 3.2.2"

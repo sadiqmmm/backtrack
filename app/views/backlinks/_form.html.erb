@@ -1,4 +1,4 @@
-<%= simple_form_for(@backlink) do |f| %>
+<%= simple_form_for(@backlink, html: { class: 'form-horizontal'}) do |f| %>
   <% if @backlink.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@backlink.errors.count, "error") %> prohibited this backlink from being saved:</h2>
@@ -11,25 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-  <%= f.input :project %>
-   
-  </div>
-  <div class="field">
+    <%= f.input :project %>   
+  
+
+  
     <%= f.input :project_url %> 
-  </div>
-  <div class="field">
+  
+  
+  <div class="form-group">
     <%= f.input :backlink_url %> 
   </div>
-  <div class="field">
+  
+  <div class="form-group">
     <%= f.input :method %> 
   </div>
-  <div class="field"> 
-    <%= f.input :published_at, input_html: { class: 'ui-datepicker' } %>
+  
+  <div class="form-group"> 
+    <%= f.input :published_at %>
   </div>
-  <div class="field">
+  
+  <div class="form-group">
     <%= f.input :notes %> 
   </div>
+  
   <div class="actions">
     <%= f.button :submit %>
   </div>
