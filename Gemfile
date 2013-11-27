@@ -34,7 +34,7 @@ end
 
  # Added Required GEMS
 group :production do
-	gem 'pg'
+	gem "pg", "~> 0.17.0"
 end
 
 gem "simple_form", "~> 3.0.0"
@@ -42,6 +42,14 @@ gem "bootstrap-sass", "~> 3.0.2.1"
 gem "jquery-turbolinks", "~> 2.0.1"
 gem "puma", "~> 2.6.0"
 gem "devise", "~> 3.2.2"
+
+group :development do        
+        # Rails App security check
+        gem 'brakeman', :require => false
+end
+
+# heroku recommended gem
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
@@ -54,3 +62,4 @@ gem "devise", "~> 3.2.2"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
