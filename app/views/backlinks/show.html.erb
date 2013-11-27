@@ -30,5 +30,12 @@
   <%= @backlink.notes %>
 </p>
 
-<%= link_to 'Edit', edit_backlink_path(@backlink) %> |
-<%= link_to 'Back', backlinks_path %>
+<p>
+<%= link_to 'Edit', edit_backlink_path(@backlink) %> | <%= link_to 'Delete', @backlink, method: :delete, data: { confirm: 'Are you sure?' } %>
+</p>
+
+<p>
+  <%= link_to '<< Back', backlinks_path %>  
+</p>
+
+

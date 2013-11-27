@@ -1,37 +1,15 @@
-<h1>Listing backlinks</h1>
+<p>
+	<%= link_to 'New Backlink', new_backlink_path, class: "btn btn-primary" %>
+</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Project</th>
-      <th>Project url</th>
-      <th>Backlink url</th>
-      <th>Method</th>
-      <th>Published at</th>
-      <th>Notes</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
+<h1>All Projects</h1>
+ 
+<table> 
   <tbody>
     <% @backlinks.each do |backlink| %>
       <tr>
-        <td><%= backlink.project %></td>
-        <td><%= backlink.project_url %></td>
-        <td><%= backlink.backlink_url %></td>
-        <td><%= backlink.method %></td>
-        <td><%= backlink.published_at %></td>
-        <td><%= backlink.notes %></td>
-        <td><%= link_to 'Show', backlink %></td>
-        <td><%= link_to 'Edit', edit_backlink_path(backlink) %></td>
-        <td><%= link_to 'Destroy', backlink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to backlink.project, backlink %></td>         
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Backlink', new_backlink_path %>
