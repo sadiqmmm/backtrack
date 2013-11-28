@@ -5,7 +5,8 @@
   <%= f.input :project_url %>   
   <%= f.input :backlink_url %> 
   <%= f.input :method %>       
-  <%= f.input :published_at, :as => :string, :input_html => {:class => 'datepicker'} %> 
+  <%= f.input :published_at, :as => :string, :input_html => {:class => 'datepicker', :value => (f.object.published_at.strftime('%d/%m/%Y') if f.object.published_at) }%> 
+   
   <%= f.input :notes %>  
   
   <div class="form-actions">

@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
  $(document).ready ->
   $(".datepicker").datepicker
-    format: "yyyy-mm-dd"
+    format: "dd/mm/yyyy"
     todayHighlight: true
     todayBtn: "linked"
     autoclose: true

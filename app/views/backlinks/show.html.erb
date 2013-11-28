@@ -22,7 +22,7 @@
 
 <p>
   <strong>Published at:</strong>
-  <%= @backlink.published_at %>
+  <%= @backlink.published_at.strftime('%d/%m/%Y') if @backlink.published_at %>
 </p>
 
 <p>
