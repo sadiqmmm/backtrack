@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127102053) do
+ActiveRecord::Schema.define(version: 20131128085235) do
 
   create_table "backlinks", force: true do |t|
     t.string   "project"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20131127102053) do
     t.string   "method"
     t.datetime "published_at"
     t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "keyword"
+    t.integer  "projects_id"
+  end
+
+  add_index "backlinks", ["projects_id"], name: "index_backlinks_on_projects_id"
+
+  create_table "projects", force: true do |t|
+    t.string   "name"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
