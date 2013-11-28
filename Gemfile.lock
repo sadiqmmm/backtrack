@@ -28,6 +28,8 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
+    bootstrap-datepicker-rails (1.1.1.9)
+      railties (>= 3.0)
     bootstrap-sass (2.3.2.2)
       sass (~> 3.2)
     brakeman (2.2.0)
@@ -160,6 +162,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails
   bootstrap-sass (= 2.3.2.2)
   brakeman
   coffee-rails (~> 4.0.0)

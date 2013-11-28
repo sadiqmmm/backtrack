@@ -36,7 +36,7 @@ end
 group :production do
 	gem "pg", "~> 0.17.0"
 end
-
+gem 'bootstrap-datepicker-rails'
 gem "simple_form", "~> 3.0.0"
 gem "bootstrap-sass", "2.3.2.2"
 gem "jquery-turbolinks", "~> 2.0.1"
