@@ -44,8 +44,8 @@ gem "puma", "~> 2.6.0"
 gem "devise", "~> 3.2.2"
 
 group :development do        
-        # Rails App security check
-        gem 'brakeman', :require => false
+    # Rails App security check
+    gem 'brakeman', :require => false
 end
 
 # heroku recommended gem
