@@ -25,6 +25,7 @@ class BacklinksController < ApplicationController
   # POST /backlinks.json
   def create
     @backlink = Backlink.new(backlink_params)
+    @comment.project_url = params[:project_id]
 
     respond_to do |format|
       if @backlink.save
@@ -69,6 +70,6 @@ class BacklinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def backlink_params
-      params.require(:backlink).permit(:project, :project_url, :backlink_url, :method, :published_at, :notes)
+      params.require(:backlink).permit(:project, :project_url, :backlink_url, :method, :published_at, :notes, :project_id)
     end
 end
